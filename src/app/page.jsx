@@ -361,6 +361,7 @@ export default function Home() {
               Join our vibrant learning community. Admissions are open for Classes 1st to 9th.
             </p>
           </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
