@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Facebook, Twitter, Instagram, ChevronDown, BookOpen, Users, Award, Calendar, Star, CheckCircle } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Facebook, Youtube, Instagram, ChevronDown, BookOpen, Users, Award, Calendar, Star, CheckCircle } from 'lucide-react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,9 +101,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8 animate-fade-in-up">
-              <div className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30">
-                <span className="font-bold text-yellow-300">Admissions Open</span> for 2025-2026
-              </div>
+ 
               <h2 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
                 Shaping Future <br/>
                 <span className="text-yellow-300">Leaders</span>
@@ -185,7 +183,7 @@ export default function Home() {
               </div>
               <div className="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Director's Message</h3>
-                <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
+                <p className="text-gray-600 text-lg  mb-6">
                   "Welcome to ST Boston EdTech. Our vision is to create a learning environment where every child feels valued and inspired to achieve their best. We believe in nurturing not just academic excellence, but also the character and values that will guide our students throughout their lives. With our dedicated team and modern facilities, we are committed to shaping the leaders of tomorrow."
                 </p>
                 <div className="flex items-center gap-4">
@@ -209,7 +207,7 @@ export default function Home() {
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-red-600">
-                  <div className="text-4xl font-bold text-gray-900 mb-1">500+</div>
+                  <div className="text-4xl font-bold text-gray-900 mb-1">1000+</div>
                   <div className="text-gray-500 font-medium">Happy Students</div>
                 </div>
                 <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-400">
@@ -388,36 +386,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 text-red-600">Fee Structure Overview</h3>
-              <div className="overflow-hidden rounded-xl border border-gray-200">
-                <table className="w-full text-sm">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-4 py-3 text-left font-bold text-gray-700">Class</th>
-                      <th className="px-4 py-3 text-right font-bold text-gray-700">Annual Fee</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {[
-                      { class: 'Class 1st - 3rd', fee: '₹30,000' },
-                      { class: 'Class 4th - 5th', fee: '₹35,000' },
-                      { class: 'Class 6th - 8th', fee: '₹40,000' },
-                      { class: 'Class 9th', fee: '₹45,000' }
-                    ].map((row, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="px-4 py-3 font-medium">{row.class}</td>
-                        <td className="px-4 py-3 text-right font-bold text-red-600">{row.fee}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-gray-500 mt-4 italic">
-                * Admission fee is one-time. Books and uniform charges are separate.
-              </p>
-            </div>
-          </div>
+            
         </div>
       </section>
 
@@ -574,13 +543,13 @@ export default function Home() {
                 Empowering the next generation with quality education, values, and skills for a brighter future.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61580245787959" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Facebook size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
-                  <Twitter size={18} />
+                <a href="youtube.com/@stbostonedtech?si=5vArJEzbYk2-T1S3" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                  <Youtube size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                <a href="https://www.instagram.com/st.bostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Instagram size={18} />
                 </a>
               </div>
