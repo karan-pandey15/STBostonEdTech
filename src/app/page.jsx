@@ -547,7 +547,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/profile.php?id=61580245787959" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Facebook size={18} />
                 </a>
-                <a href="youtube.com/@stbostonedtech?si=5vArJEzbYk2-T1S3" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                <a href="https://www.youtube.com/@stbostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Youtube size={18} />
                 </a>
                 <a href="https://www.instagram.com/st.bostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
