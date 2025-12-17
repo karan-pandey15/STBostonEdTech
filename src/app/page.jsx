@@ -188,7 +188,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="h-px bg-gray-300 flex-1"></div>
-                  <span className="font-signature text-2xl text-red-600">Maya Mishra</span>
+                  <span className="text-2xl text-red-600">Maya Mishra</span>
                   <div className="h-px bg-gray-300 flex-1"></div>
                 </div>
               </div>
@@ -462,7 +462,7 @@ export default function Home() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                      placeholder="John Doe"
+                      placeholder=""
                     />
                   </div>
                   <div>
@@ -473,7 +473,7 @@ export default function Home() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                      placeholder="9876543210"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -486,7 +486,7 @@ export default function Home() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                    placeholder="john@example.com"
+                    placeholder=""
                   />
                 </div>
 
