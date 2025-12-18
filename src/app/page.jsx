@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Facebook, Youtube, Instagram, ChevronDown, BookOpen, Users, Award, Calendar, Star, CheckCircle } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Facebook, Youtube, Instagram, ChevronDown, BookOpen, Users, Award, Calendar, Star, CheckCircle, ArrowRight, Search } from 'lucide-react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +12,45 @@ export default function Home() {
     class: '',
     message: ''
   });
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Annual Sports Day Celebration",
+      excerpt: "Our students showcased exceptional talent and sportsmanship during the Annual Sports Day. From track events to team sports, the energy was electrifying.",
+      date: "December 15, 2024",
+      author: "Sports Department",
+      image: "/image/first.png",
+      category: "Events"
+    },
+    {
+      id: 2,
+      title: "Science Exhibition 2024",
+      excerpt: "Young minds at work! The Science Exhibition featured innovative projects and models created by our students, demonstrating their understanding of complex scientific concepts.",
+      date: "November 28, 2024",
+      author: "Science Club",
+      image: "/image/second.png",
+      category: "Academics"
+    },
+    {
+      id: 3,
+      title: "Cultural Fest Highlights",
+      excerpt: "A mesmerizing display of art, music, and dance. The Cultural Fest brought together the diverse talents of our student body in a spectacular show.",
+      date: "October 10, 2024",
+      author: "Arts Committee",
+      image: "/image/third.png",
+      category: "Culture"
+    },
+    {
+      id: 4,
+      title: "Community Service Initiative",
+      excerpt: "Our students visited the local shelter to distribute food and clothes, learning the value of empathy and community service.",
+      date: "September 05, 2024",
+      author: "Social Service Club",
+      image: "/image/four.png",
+      category: "Community"
+    }
+  ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -53,7 +92,7 @@ export default function Home() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'academics', 'admission', 'contact'].map((item) => (
+              {['home', 'about', 'academics', 'sports-academy', 'admission', 'blog', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -61,7 +100,7 @@ export default function Home() {
                     activeSection === item ? 'text-red-600' : 'text-gray-600 hover:text-red-600'
                   }`}
                 >
-                  {item === 'about' ? 'About Us' : item}
+                  {item === 'about' ? 'About Us' : item === 'sports-academy' ? 'Sports Academy' : item}
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full ${activeSection === item ? 'w-full' : ''}`}></span>
                 </button>
               ))}
@@ -79,13 +118,13 @@ export default function Home() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden pb-4 bg-white border-t border-gray-100 animate-fade-in-down">
-              {['home', 'about', 'academics', 'admission', 'contact'].map((item) => (
+              {['home', 'about', 'academics', 'sports-academy', 'admission', 'blog', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
                   className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium capitalize border-l-4 border-transparent hover:border-red-600 transition-all"
                 >
-                  {item === 'about' ? 'About Us' : item}
+                  {item === 'about' ? 'About Us' : item === 'sports-academy' ? 'Sports Academy' : item}
                 </button>
               ))}
             </div>
@@ -344,6 +383,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sports Academy Section */}
+      <section id="sports-academy" className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-red-50 skew-x-12 transform origin-top translate-x-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <span className="text-red-600 font-bold tracking-wider uppercase text-sm">Champions in the Making</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">ST Boston Sports Academy</h2>
+            <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We believe in the power of sports to build character. Our dedicated sports academy offers professional training facilities right within the school campus.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Cricket Academy',
+                image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                desc: 'Professional turf wickets, bowling machines, and expert coaching for aspiring cricketers.',
+                icon: '🏏'
+              },
+              {
+                title: 'Football Club',
+                image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                desc: 'FIFA standard size field with specialized training programs for different age groups.',
+                icon: '⚽'
+              },
+              {
+                title: 'Wrestling Arena',
+                image: 'https://images.unsplash.com/photo-1605296867304-6c01636290ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                desc: 'State-of-the-art mats and safety gear with guidance from national-level wrestlers.',
+                icon: '🤼'
+              },
+              {
+                title: 'Tennis Court',
+                image: 'https://images.unsplash.com/photo-1595435934249-fd96316cd29a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                desc: 'Synthetic courts with floodlights for evening practice and professional coaching.',
+                icon: '🎾'
+              }
+            ].map((sport, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={sport.image} 
+                    alt={sport.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="text-3xl mb-2">{sport.icon}</div>
+                    <h3 className="text-xl font-bold">{sport.title}</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {sport.desc}
+                  </p>
+                  <button className="text-red-600 font-bold text-sm uppercase tracking-wider hover:text-red-800 transition-colors flex items-center">
+                    View Details <ArrowRight size={16} className="ml-1" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 bg-red-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h3 className="text-3xl font-bold mb-2">Join the Academy</h3>
+                <p className="text-red-100">Registration open for after-school sports programs.</p>
+              </div>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-white text-red-600 px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 hover:text-red-900 transition-all shadow-lg"
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Admission Section */}
       <section id="admission" className="py-24 bg-red-600 text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
@@ -388,6 +510,113 @@ export default function Home() {
             </div>
 
             
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-red-600 font-bold tracking-wider uppercase text-sm">School News</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Latest Updates</h2>
+            <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay updated with the latest happenings, achievements, and stories from our school community.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Main Blog List */}
+            <div className="lg:col-span-2 space-y-12">
+              {blogPosts.map((post) => (
+                <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row border border-gray-100">
+                  <div className="md:w-2/5 relative overflow-hidden group">
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      className="w-full h-64 md:h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        e.target.src = 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+                      }}
+                    />
+                    <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                      {post.category}
+                    </div>
+                  </div>
+                  <div className="p-8 md:w-3/5 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
+                        <div className="flex items-center">
+                          <Calendar size={14} className="mr-1" />
+                          {post.date}
+                        </div>
+                        <div className="flex items-center">
+                          <Users size={14} className="mr-1" />
+                          {post.author}
+                        </div>
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors cursor-pointer">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                    <button className="text-red-600 font-bold uppercase text-sm tracking-wider flex items-center hover:text-red-800 transition-colors group">
+                      Read More <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Sidebar */}
+            <div className="space-y-8">
+              {/* Search Widget */}
+              <div className="bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Search</h3>
+                <div className="relative">
+                  <input 
+                    type="text" 
+                    placeholder="Search articles..." 
+                    className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                  />
+                  <Search className="absolute left-3 top-3.5 text-gray-400" size={18} />
+                </div>
+              </div>
+
+              {/* Categories Widget */}
+              <div className="bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
+                <ul className="space-y-3">
+                  {['Academics', 'Events', 'Sports', 'Culture', 'Community', 'Achievements'].map((cat) => (
+                    <li key={cat}>
+                      <a href="#" className="flex justify-between items-center text-gray-600 hover:text-red-600 transition-colors group">
+                        <span>{cat}</span>
+                        <span className="bg-white text-gray-500 text-xs font-bold px-2 py-1 rounded-full group-hover:bg-red-100 group-hover:text-red-600 transition-colors shadow-sm">
+                          {Math.floor(Math.random() * 10) + 1}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Newsletter Widget */}
+              <div className="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl shadow-lg text-white text-center">
+                <h3 className="text-xl font-bold mb-2">Subscribe to Newsletter</h3>
+                <p className="text-red-100 text-sm mb-6">Get the latest updates and news delivered directly to your inbox.</p>
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="w-full px-4 py-3 rounded-xl text-gray-900 mb-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+                <button className="w-full bg-yellow-400 text-red-900 font-bold py-3 rounded-xl hover:bg-yellow-300 transition-colors shadow-md">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -559,7 +788,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
-                {['Home', 'About Us', 'Academics', 'Admission', 'Contact'].map((link) => (
+                {['Home', 'About Us', 'Academics', 'Admission', 'Blog', 'Contact'].map((link) => (
                   <li key={link}>
                     <button
                       onClick={() => scrollToSection(link.toLowerCase().replace(' ', ''))}
