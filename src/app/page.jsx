@@ -546,10 +546,7 @@ export default function Home() {
                   <div className="p-8 md:w-3/5 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
-                        <div className="flex items-center">
-                          <Calendar size={14} className="mr-1" />
-                          {post.date}
-                        </div>
+                     
                         <div className="flex items-center">
                           <Users size={14} className="mr-1" />
                           {post.author}
