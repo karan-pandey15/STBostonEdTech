@@ -812,7 +812,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-3 text-red-600 flex-shrink-0" size={18} />
-                  <span>info@stbostonedtech.edu.in</span>
+                  <span>info@stbostonedtech.com</span>
                 </li>
               </ul>
             </div>
