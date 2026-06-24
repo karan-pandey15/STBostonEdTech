@@ -85,7 +85,7 @@ export default function Home() {
                 <BookOpen className="text-white" size={24} />
               </div>
               <div>
-                <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">ST Boston EdTech</h1>
+                <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">St Boston EdTech</h1>
                 <p className="text-xs text-red-600 font-semibold tracking-wider uppercase">CBSE Board • Excellence in Education</p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Home() {
               <div className="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Director's Message</h3>
                 <p className="text-gray-600 text-lg  mb-6">
-                  "Welcome to ST Boston EdTech. Our vision is to create a learning environment where every child feels valued and inspired to achieve their best. We believe in nurturing not just academic excellence, but also the character and values that will guide our students throughout their lives. With our dedicated team and modern facilities, we are committed to shaping the leaders of tomorrow."
+                  "Welcome to St Boston EdTech. Our vision is to create a learning environment where every child feels valued and inspired to achieve their best. We believe in nurturing not just academic excellence, but also the character and values that will guide our students throughout their lives. With our dedicated team and modern facilities, we are committed to shaping the leaders of tomorrow."
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="h-px bg-gray-300 flex-1"></div>
@@ -238,7 +238,7 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission & Vision</h3>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                At ST Boston EdTech School, we are committed to providing exceptional education for students from <span className="font-bold text-red-600">Class 1st to 9th</span>. Our mission is to nurture curious minds, foster creativity, and build strong foundations in academics, character, and life skills.
+                At St Boston EdTech School, we are committed to providing exceptional education for students from <span className="font-bold text-red-600">Class 1st to 9th</span>. Our mission is to nurture curious minds, foster creativity, and build strong foundations in academics, character, and life skills.
               </p>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                 We believe in holistic development where every child discovers their unique potential through innovative teaching methods, technology integration, and personalized attention in a safe and supportive environment.
@@ -345,7 +345,7 @@ export default function Home() {
           <div className="bg-gray-900 rounded-3xl shadow-2xl overflow-hidden text-white">
             <div className="grid md:grid-cols-2">
               <div className="p-12 flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-8">Why Choose ST Boston?</h3>
+                <h3 className="text-3xl font-bold mb-8">Why Choose St Boston?</h3>
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-xl font-bold text-yellow-400 mb-2">Interactive Learning</h4>
@@ -389,7 +389,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <span className="text-red-600 font-bold tracking-wider uppercase text-sm">Champions in the Making</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">ST Boston Sports Academy</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">St Boston Sports Academy</h2>
             <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in the power of sports to build character. Our dedicated sports academy offers professional training facilities right within the school campus.
@@ -618,142 +618,175 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-red-600 font-bold tracking-wider uppercase text-sm">Get in Touch</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Contact Us</h2>
-            <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
-          </div>
+     <section
+  id="contact"
+  className="py-2 bg-gray-50 overflow-x-hidden"
+>
+  <div className="max-w-7xl mx-auto px-[10px] sm:px-6 lg:px-8">
+    <div className="text-center mb-10 md:mb-16">
+      <span className="text-red-600 font-bold tracking-wider uppercase text-sm">
+        Get in Touch
+      </span>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
+        Contact Us
+      </h2>
+      <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-3xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex items-start space-x-6">
-                  <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-                    <MapPin size={28} />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h4>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      Khasua Bhaluwan,<br />
-                      Tehsil Bansgaon, Kauriram,<br />
-                      Gorakhpur, Uttar Pradesh
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-3xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex items-start space-x-6">
-                  <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-                    <Phone size={28} />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Call Us</h4>
-                    <p className="text-gray-600 text-lg font-medium">
-                      +91 9519325100
-                    </p>
-                    <p className="text-sm text-gray-500 mt-1">Mon-Sat, 8:00 AM - 4:00 PM</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-3xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex items-start space-x-6">
-                  <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-                    <Mail size={28} />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Email Us</h4>
-                    <p className="text-gray-600 text-lg">
-                      info@stbostonedtech.edu.in
-                    </p>
-                  </div>
-                </div>
-              </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+      {/* Contact Information */}
+      <div className="space-y-6 md:space-y-8 min-w-0">
+        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+          <div className="flex items-start space-x-4 sm:space-x-6">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+              <MapPin size={24} />
             </div>
-
-            {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Send a Message</h3>
-              <div className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                      placeholder=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                    placeholder=""
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Class Interested In</label>
-                  <select 
-                    name="class"
-                    value={formData.class}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                  >
-                    <option value="">Select Class</option>
-                    {[...Array(9)].map((_, i) => (
-                      <option key={i} value={i + 1}>Class {i + 1}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="4"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-
-                <button
-                  onClick={handleSubmit}
-                  className="w-full bg-red-600 text-white py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
-                  Send Message
-                </button>
-              </div>
+            <div className="min-w-0">
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Visit Us
+              </h4>
+              <p className="text-gray-600 leading-relaxed break-words">
+                Khasua Bhaluwan,
+                <br />
+                Tehsil Bansgaon, Kauriram,
+                <br />
+                Gorakhpur, Uttar Pradesh
+              </p>
             </div>
           </div>
         </div>
-      </section>
+
+        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+          <div className="flex items-start space-x-4 sm:space-x-6">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+              <Phone size={24} />
+            </div>
+            <div className="min-w-0">
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Call Us
+              </h4>
+              <p className="text-gray-600 text-base sm:text-lg font-medium break-words">
+                +91 9519325100
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Mon-Sat, 8:00 AM - 4:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+          <div className="flex items-start space-x-4 sm:space-x-6">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+              <Mail size={24} />
+            </div>
+            <div className="min-w-0">
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Email Us
+              </h4>
+              <p className="text-gray-600 break-all">
+                info@stbostonedtech.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-8 md:p-10 min-w-0">
+        <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          Send a Message
+        </h3>
+
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                placeholder="Enter phone number"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Class Interested In
+            </label>
+            <select
+              name="class"
+              value={formData.class}
+              onChange={handleInputChange}
+              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+            >
+              <option value="">Select Class</option>
+              {[...Array(9)].map((_, i) => (
+                <option key={i} value={i + 1}>
+                  Class {i + 1}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Message
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              rows={4}
+              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all resize-none"
+              placeholder="How can we help you?"
+            ></textarea>
+          </div>
+
+          <button
+            onClick={handleSubmit}
+            className="w-full bg-red-600 text-white py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-xl"
+          >
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white pt-20 pb-10">
@@ -764,7 +797,7 @@ export default function Home() {
                 <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
                   <BookOpen className="text-white" size={20} />
                 </div>
-                <h3 className="text-xl font-bold">ST Boston EdTech</h3>
+                <h3 className="text-xl font-bold">St Boston EdTech</h3>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
                 Empowering the next generation with quality education, values, and skills for a brighter future.
@@ -776,7 +809,7 @@ export default function Home() {
                 <a href="https://www.youtube.com/@stbostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Youtube size={18} />
                 </a>
-                <a href="https://www.instagram.com/st.bostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                <a href="https://www.instagram.com/St.bostonedtech" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                   <Instagram size={18} />
                 </a>
               </div>
@@ -834,7 +867,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 ST Boston EdTech School. All rights reserved. | Managing Director: Maya Mishra</p>
+            <p>&copy; 2025 St Boston EdTech School. All rights reserved. | Managing Director: Maya Mishra</p>
           </div>
         </div>
       </footer>

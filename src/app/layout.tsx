@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ST Boston EdTech",
+  title: "St Boston EdTech",
   description: 'Addmision Open'
 };
 
