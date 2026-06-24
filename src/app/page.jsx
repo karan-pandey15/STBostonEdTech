@@ -86,7 +86,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">St Boston EdTech</h1>
-                <p className="text-xs text-red-600 font-semibold tracking-wider uppercase">CBSE Board • Excellence in Education</p>
+                <p className="text-xs text-red-600 font-semibold tracking-wider uppercase">School For Your Kid's Bright Future</p>
               </div>
             </div>
 
