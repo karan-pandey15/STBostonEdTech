@@ -78,16 +78,23 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Navigation */}
       <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
+        {/* Top Header */}
+        <div className="bg-red-600 text-white py-2 px-4 sm:px-6 lg:px-8 border-b border-red-700">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <p className="text-xs font-semibold tracking-wider text-white">School For Your Kid's Bright Future</p>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-yellow-400 hover:bg-yellow-500 text-red-900 font-bold px-3 py-1 rounded transition-colors text-[10px] sm:text-xs uppercase tracking-wider shadow-sm"
+            >
+              Admission Open
+            </button>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform">
-                <BookOpen className="text-white" size={24} />
-              </div>
-              <div>
-                <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">St Boston EdTech</h1>
-                <p className="text-xs text-red-600 font-semibold tracking-wider uppercase">School For Your Kid's Bright Future</p>
-              </div>
+            <div className="flex flex-col items-start justify-center py-1">
+              <img src="/stbostonlogo.png" alt="St Boston EdTech" className="h-12 md:h-11 w-auto object-contain" />
             </div>
 
             {/* Desktop Menu */}
@@ -96,9 +103,8 @@ export default function Home() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className={`text-sm font-bold uppercase tracking-wider transition-colors relative group ${
-                    activeSection === item ? 'text-red-600' : 'text-gray-600 hover:text-red-600'
-                  }`}
+                  className={`text-sm font-bold uppercase tracking-wider transition-colors relative group ${activeSection === item ? 'text-red-600' : 'text-gray-600 hover:text-red-600'
+                    }`}
                 >
                   {item === 'about' ? 'About Us' : item === 'sports-academy' ? 'Sports Academy' : item}
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full ${activeSection === item ? 'w-full' : ''}`}></span>
@@ -133,16 +139,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 min-h-screen flex items-center relative overflow-hidden">
+      <section id="home" className="pt-28 min-h-screen flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-red-600 to-orange-600 opacity-95 z-0"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8 animate-fade-in-up">
- 
+
               <h2 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
-                Shaping Future <br/>
+                Shaping Future <br />
                 <span className="text-yellow-300">Leaders</span>
               </h2>
               <p className="text-xl text-red-50 leading-relaxed max-w-lg">
@@ -182,7 +188,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* Wave Separator */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
           <svg className="relative block w-full h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -204,8 +210,8 @@ export default function Home() {
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-20 transform hover:shadow-2xl transition-all duration-300">
             <div className="grid md:grid-cols-12 gap-0">
               <div className="md:col-span-4 bg-red-600 relative min-h-[300px] md:min-h-full">
-                 <img
-                  src="/image/md.png" 
+                <img
+                  src="/image/md.png"
                   alt="Maya Mishra - Managing Director"
                   className="w-full h-full object-cover opacity-90 mix-blend-overlay"
                   onError={(e) => {
@@ -243,7 +249,7 @@ export default function Home() {
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                 We believe in holistic development where every child discovers their unique potential through innovative teaching methods, technology integration, and personalized attention in a safe and supportive environment.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-red-600">
                   <div className="text-4xl font-bold text-gray-900 mb-1">1000+</div>
@@ -368,9 +374,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative h-full min-h-[400px]">
-                <img 
-                  src="/image/third.png" 
-                  alt="Interactive Learning" 
+                <img
+                  src="/image/third.png"
+                  alt="Interactive Learning"
                   className="absolute inset-0 w-full h-full object-cover"
                   onError={(e) => {
                     e.target.src = 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
@@ -425,9 +431,9 @@ export default function Home() {
             ].map((sport, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
                 <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={sport.image} 
-                    alt={sport.title} 
+                  <img
+                    src={sport.image}
+                    alt={sport.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
@@ -447,7 +453,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-16 bg-red-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -455,7 +461,7 @@ export default function Home() {
                 <h3 className="text-3xl font-bold mb-2">Join the Academy</h3>
                 <p className="text-red-100">Registration open for after-school sports programs.</p>
               </div>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-white text-red-600 px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 hover:text-red-900 transition-all shadow-lg"
               >
@@ -469,8 +475,8 @@ export default function Home() {
       {/* Admission Section */}
       <section id="admission" className="py-24 bg-red-600 text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
-           <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
-           <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-yellow-400 blur-3xl"></div>
+          <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-yellow-400 blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -483,33 +489,33 @@ export default function Home() {
               Join our vibrant learning community. Admissions are open for Classes 1st to 9th.
             </p>
           </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-8 flex items-center">
+              <BookOpen className="mr-3" /> Admission Process
+            </h3>
+            <div className="space-y-8">
+              {[
+                { step: '01', title: 'Registration', desc: 'Fill the enquiry form or visit school office.' },
+                { step: '02', title: 'Interaction', desc: 'Student interaction and document verification.' },
+                { step: '03', title: 'Confirmation', desc: 'Fee payment and admission confirmation.' }
+              ].map((item, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="text-4xl font-bold text-yellow-400 opacity-50 font-mono">
+                    {item.step}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-1">{item.title}</h4>
+                    <p className="text-red-100 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-8 flex items-center">
-                <BookOpen className="mr-3" /> Admission Process
-              </h3>
-              <div className="space-y-8">
-                {[
-                  { step: '01', title: 'Registration', desc: 'Fill the enquiry form or visit school office.' },
-                  { step: '02', title: 'Interaction', desc: 'Student interaction and document verification.' },
-                  { step: '03', title: 'Confirmation', desc: 'Fee payment and admission confirmation.' }
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="text-4xl font-bold text-yellow-400 opacity-50 font-mono">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-1">{item.title}</h4>
-                      <p className="text-red-100 text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            
         </div>
       </section>
 
@@ -531,9 +537,9 @@ export default function Home() {
               {blogPosts.map((post) => (
                 <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row border border-gray-100">
                   <div className="md:w-2/5 relative overflow-hidden group">
-                    <img 
-                      src={post.image} 
-                      alt={post.title} 
+                    <img
+                      src={post.image}
+                      alt={post.title}
                       className="w-full h-64 md:h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
                         e.target.src = 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
@@ -546,7 +552,7 @@ export default function Home() {
                   <div className="p-8 md:w-3/5 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
-                     
+
                         <div className="flex items-center">
                           <Users size={14} className="mr-1" />
                           {post.author}
@@ -573,9 +579,9 @@ export default function Home() {
               <div className="bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Search</h3>
                 <div className="relative">
-                  <input 
-                    type="text" 
-                    placeholder="Search articles..." 
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
                     className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                   />
                   <Search className="absolute left-3 top-3.5 text-gray-400" size={18} />
@@ -603,9 +609,9 @@ export default function Home() {
               <div className="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl shadow-lg text-white text-center">
                 <h3 className="text-xl font-bold mb-2">Subscribe to Newsletter</h3>
                 <p className="text-red-100 text-sm mb-6">Get the latest updates and news delivered directly to your inbox.</p>
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
+                <input
+                  type="email"
+                  placeholder="Your email address"
                   className="w-full px-4 py-3 rounded-xl text-gray-900 mb-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
                 <button className="w-full bg-yellow-400 text-red-900 font-bold py-3 rounded-xl hover:bg-yellow-300 transition-colors shadow-md">
@@ -618,175 +624,175 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-     <section
-  id="contact"
-  className="py-2 bg-gray-50 overflow-x-hidden"
->
-  <div className="max-w-7xl mx-auto px-[10px] sm:px-6 lg:px-8">
-    <div className="text-center mb-10 md:mb-16">
-      <span className="text-red-600 font-bold tracking-wider uppercase text-sm">
-        Get in Touch
-      </span>
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
-        Contact Us
-      </h2>
-      <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
-    </div>
+      <section
+        id="contact"
+        className="py-2 bg-gray-50 overflow-x-hidden"
+      >
+        <div className="max-w-7xl mx-auto px-[10px] sm:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-red-600 font-bold tracking-wider uppercase text-sm">
+              Get in Touch
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
+              Contact Us
+            </h2>
+            <div className="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-      {/* Contact Information */}
-      <div className="space-y-6 md:space-y-8 min-w-0">
-        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
-          <div className="flex items-start space-x-4 sm:space-x-6">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-              <MapPin size={24} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            {/* Contact Information */}
+            <div className="space-y-6 md:space-y-8 min-w-0">
+              <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start space-x-4 sm:space-x-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+                    <MapPin size={24} />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      Visit Us
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed break-words">
+                      Khasua Bhaluwan,
+                      <br />
+                      Tehsil Bansgaon, Kauriram,
+                      <br />
+                      Gorakhpur, Uttar Pradesh
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start space-x-4 sm:space-x-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+                    <Phone size={24} />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      Call Us
+                    </h4>
+                    <p className="text-gray-600 text-base sm:text-lg font-medium break-words">
+                      +91 9519325100
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Mon-Sat, 8:00 AM - 4:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start space-x-4 sm:space-x-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
+                    <Mail size={24} />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      Email Us
+                    </h4>
+                    <p className="text-gray-600 break-all">
+                      info@stbostonedtech.com
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="min-w-0">
-              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
-                Visit Us
-              </h4>
-              <p className="text-gray-600 leading-relaxed break-words">
-                Khasua Bhaluwan,
-                <br />
-                Tehsil Bansgaon, Kauriram,
-                <br />
-                Gorakhpur, Uttar Pradesh
-              </p>
+
+            {/* Contact Form */}
+            <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-8 md:p-10 min-w-0">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                Send a Message
+              </h3>
+
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                    placeholder="Enter your email"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Class Interested In
+                  </label>
+                  <select
+                    name="class"
+                    value={formData.class}
+                    onChange={handleInputChange}
+                    className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
+                  >
+                    <option value="">Select Class</option>
+                    {[...Array(9)].map((_, i) => (
+                      <option key={i} value={i + 1}>
+                        Class {i + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all resize-none"
+                    placeholder="How can we help you?"
+                  ></textarea>
+                </div>
+
+                <button
+                  onClick={handleSubmit}
+                  className="w-full bg-red-600 text-white py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-xl"
+                >
+                  Send Message
+                </button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
-          <div className="flex items-start space-x-4 sm:space-x-6">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-              <Phone size={24} />
-            </div>
-            <div className="min-w-0">
-              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
-                Call Us
-              </h4>
-              <p className="text-gray-600 text-base sm:text-lg font-medium break-words">
-                +91 9519325100
-              </p>
-              <p className="text-sm text-gray-500 mt-1">
-                Mon-Sat, 8:00 AM - 4:00 PM
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-8 transform hover:-translate-y-1 transition-transform duration-300">
-          <div className="flex items-start space-x-4 sm:space-x-6">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 text-red-600">
-              <Mail size={24} />
-            </div>
-            <div className="min-w-0">
-              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
-                Email Us
-              </h4>
-              <p className="text-gray-600 break-all">
-                info@stbostonedtech.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-8 md:p-10 min-w-0">
-        <h3 className="text-2xl font-bold text-gray-900 mb-8">
-          Send a Message
-        </h3>
-
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                placeholder="Enter your name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-                placeholder="Enter phone number"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Class Interested In
-            </label>
-            <select
-              name="class"
-              value={formData.class}
-              onChange={handleInputChange}
-              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all"
-            >
-              <option value="">Select Class</option>
-              {[...Array(9)].map((_, i) => (
-                <option key={i} value={i + 1}>
-                  Class {i + 1}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Message
-            </label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              rows={4}
-              className="w-full min-w-0 box-border px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all resize-none"
-              placeholder="How can we help you?"
-            ></textarea>
-          </div>
-
-          <button
-            onClick={handleSubmit}
-            className="w-full bg-red-600 text-white py-4 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-xl"
-          >
-            Send Message
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>  
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white pt-20 pb-10">
@@ -854,9 +860,9 @@ export default function Home() {
               <h4 className="text-lg font-bold mb-6 text-white">Newsletter</h4>
               <p className="text-gray-400 mb-4">Subscribe to get updates on admissions and events.</p>
               <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
+                <input
+                  type="email"
+                  placeholder="Your email"
                   className="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none w-full border border-gray-700 focus:border-red-600"
                 />
                 <button className="bg-red-600 px-4 py-2 rounded-r-lg hover:bg-red-700 transition-colors">
