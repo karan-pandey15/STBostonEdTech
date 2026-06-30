@@ -93,8 +93,14 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex flex-col items-start justify-center py-1">
+            <div className="flex items-center gap-3 py-1">
               <img src="/stlogo.jpeg" alt="St Boston EdTech" className="h-[4.5rem] md:h-[4.125rem] w-auto object-contain" />
+              <div className="flex flex-col justify-center leading-none">
+                <span className="font-extrabold text-[1.2rem] md:text-[1.45rem] text-red-600 tracking-tight font-sans">St. Boston</span>
+                <span className="font-bold text-[0.72rem] md:text-[0.82rem] text-gray-700 tracking-[0.2em] uppercase mt-0.5">
+                  Edtech <span className="normal-case tracking-normal font-semibold">School</span>
+                </span>
+              </div>
             </div>
 
             {/* Desktop Menu */}
